@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvíz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="start-screen" class="screen active">
+            <h1>🎉 Vítejte v kvízu! 🎉</h1>
+            <button id="start-btn" class="btn">🎮 Hrát</button>
+        </div>
+
+        <div id="difficulty-screen" class="screen">
+            <h2>🛠️ Vyberte obtížnost</h2>
+            <div class="difficulty-buttons">
+                <button class="btn difficulty-btn" data-difficulty="easy">😎 Jednoduchá</button>
+                <button class="btn difficulty-btn" data-difficulty="medium">🤨 Střední</button>
+                <button class="btn difficulty-btn" data-difficulty="hard">😤 Obtížná</button>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <h1>📝 Kvíz</h1>
+            <div id="question" class="question"></div>
+            <div id="options" class="options-container"></div>
+            <p>⏰ Čas: <span id="timer">10</span> s</p>
+            <div id="score">⭐ Skóre: 0</div>
+        </div>
+
+        <!-- Výsledková obrazovka (skrytá na začátku) -->
+        <div id="results-screen" class="screen" style="display: none;">
+            <h1>🎉 Kvíz dokončen! 🎉</h1>
+            <p class="final-score">Tvé skóre: <strong id="final-score"></strong></p>
+            
+            <!-- Historie výsledků -->
+            <div id="history"></div>
+            <button class="btn" onclick="clearHistory()">🗑️ Vymazat historii</button>
+        
+            <button class="btn restart-btn" onclick="location.reload()">🔄 Hrát znovu</button>
+        </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>
