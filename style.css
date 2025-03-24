@@ -1,0 +1,135 @@
+/* Nastavení základního vzhledu stránky */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #526D82, #27374D);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Kontejner pro kvíz */
+.quiz-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Styly pro nadpisy */
+h1, h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Styly pro tlačítka */
+.btn {
+    background-color: #9DB2BF;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #AFC8AD;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Kontejner pro možnosti odpovědí */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.options-container button {
+    background: #9DB2BF;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.options-container button:hover {
+    background: #007bff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Efekt pro správnou/špatnou odpověď */
+.options-container button.correct {
+    background: #28a745 !important;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.5);
+}
+
+.options-container button.wrong {
+    background: #dc3545 !important;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.5);
+}
+
+/* Skrytí screenů kromě aktivního */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Tlačítko pro restart */
+.restart-btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Styl pro historii výsledků */
+#history {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+#history p {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styl pro tlačítko vymazání historie */
+#history + .btn {
+    background: #dc3545;
+    color: white;
+}
+
+#history + .btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
